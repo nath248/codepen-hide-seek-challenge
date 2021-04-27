@@ -86,6 +86,7 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/*Style Code Below*/
 
 body {
   height: 100vh;
@@ -114,8 +115,17 @@ footer {
   flex-flow: row;
 }
 
+h1, h3, h4, a {
+  font-family: 'Original Surfer', cursive;
+}
+
+p {
+  font-family: 'Oranienbaum', serif;
+}
+/*Accordion List Below*/
+
 .accordion {
-  background-color: #465672;
+  background-color: #edf2f4;
   color: #387294;
   font-family: 'Oranienbaum', serif;
   cursor: pointer;
@@ -126,16 +136,19 @@ footer {
   outline: none;
   transition: 0.4s;
 }
+
 .active, .accordion:hover {
-  background-color: #ccc;
+  background-color: #749AAA;
 }
+
 .panel {
-  padding: 0 18px;
+  padding: 0 18px 5px 18px;
   background-color: white;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
+
 .accordion:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
   font-size: 13px;
@@ -148,62 +161,78 @@ footer {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
-a.middle {
+/* Underline Animation Below*/
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+  display: inline-block;
+  padding: 15px 20px;
   position: relative;
 }
 
-a.middle:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
+a:after {
+  background: none repeat scroll 0 0 transparent;
   bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  background: #749AAA;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+a:hover:after {
+  width: 100%;
   left: 0;
-  background-color: #FFF;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out;
 }
 
-a.middle:hover:before {
-  visibility: visible;
-  transform: scaleX(1);
+/*Reveal Animation Below*/
+
+.reveal {
+  color: transparent;
+  background-position: right;
+  background-size: 100% 100%;
+  background-image: linear-gradient(#749AAA, #749AAA);
+  display: inline;
+  background-repeat: no-repeat;
+  transition: all 500ms ease-in-out;
+  font-weight: 900;
 }
 
-h1, h3, h4, a {
-  font-family: 'Original Surfer', cursive;
+.reveal:hover {
+  color: #374358;
+  background-size: 0% 100%;
 }
 
-p {
-  font-family: 'Oranienbaum', serif;
-}
-
-/* Background Animation Below*/
+/* Header Animations Below*/
 
 h1, h3 {
   color: #fff;
-  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
-  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
-  animation: neon1 1.5s ease-in-out infinite alternate;
+  webkit-animation: glow .5s ease-in-out infinite alternate;
+  moz-animation: glow .5s ease-in-out infinite alternate;
+  animation: glow .5s ease-in-out infinite alternate;
 }
 
 h1:hover {
   color: #8d99ae;
-  -webkit-animation: none;
-  -moz-animation: none;
+  webkit-animation: none;
+  moz-animation: none;
   animation: none;
 }
 
 h3:hover {
   color: #8d99ae;
-  -webkit-animation: none;
-  -moz-animation: none;
+  webkit-animation: none;
+  moz-animation: none;
   animation: none;
 }
 
 /*glow for webkit*/
 
-@-webkit-keyframes neon1 {
+@-webkit-keyframes glow {
   from {
     text-shadow: 0 0 10px #fff,
       0 0 20px #fff,
@@ -228,7 +257,7 @@ h3:hover {
 
 /*glow for mozilla*/
 
-@-moz-keyframes neon1 {
+@-moz-keyframes glow {
   from {
     text-shadow: 0 0 10px #fff,
       0 0 20px #fff,
@@ -253,7 +282,7 @@ h3:hover {
 
 /*glow*/
 
-@keyframes neon1 {
+@keyframes glow {
   from {
     text-shadow: 0 0 10px #fff,
       0 0 20px #fff,
