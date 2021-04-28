@@ -90,7 +90,7 @@ textarea {
 
 body {
   height: 100vh;
-  background: black;
+  background-image: url("https://images.unsplash.com/photo-1565932887479-b18108f07ffd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80");
   color: #374358;
 }
 
@@ -130,7 +130,7 @@ p {
   font-family: 'Oranienbaum', serif;
   cursor: pointer;
   padding: 18px;
-  width: 100%;
+  width: 80%;
   text-align: left;
   border: none;
   outline: none;
@@ -142,9 +142,10 @@ p {
 }
 
 .panel {
-  padding: 0 18px 5px 18px;
+  padding: 0 16px 5px 16px;
   background-color: white;
   max-height: 0;
+  width: 76%;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
