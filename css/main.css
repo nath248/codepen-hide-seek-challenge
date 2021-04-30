@@ -142,7 +142,7 @@ p {
 }
 
 .panel {
-  padding: 0 16px 5px 16px;
+  margin: 2px 0 2px 0;
   background-color: white;
   max-height: 0;
   width: 76%;
