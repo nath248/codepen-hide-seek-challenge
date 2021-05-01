@@ -121,6 +121,7 @@ h1, h3, h4, a {
 
 p {
   font-family: 'Oranienbaum', serif;
+  text-indent: inherit;
 }
 /*Accordion List Below*/
 
@@ -142,7 +143,7 @@ p {
 }
 
 .panel {
-  margin: 2px 0 2px 0;
+  margin: 2px 0 0 0;
   padding-left: 10px;
   padding-right: 10px;
   background-color: white;
